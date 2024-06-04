@@ -2,14 +2,22 @@ import pandas as pd
 import utilities as ut
 
 # Define the file paths
-text_file_path = '/Users/planktonperson/Data/Buskey_FC/SWMP_2014-17/AB_030917a/AB_030917a_run_summary.txt'
+text_file_path = './AB_030917a_run_summary.txt'
 output_tsv_path = './test.tsv'
 
 # Define the parameters of interest and their corresponding column names in the DataFrame
 parameters_of_interest = {
     'Mode': 'acq_run_mode',
-    'Used': 'images_used',
-    'Total': 'images_total'
+    'Sample Volume Processed': 'acq_vol_processed',
+    'Fluid Volume Imaged': 'acq_vol_imaged',
+    'Particle Count': 'sample_particle_num',
+    'Start': 'acq_process_start',
+    'End': 'acq_process_end',
+    'Software': 'acq_software',
+    'Magnification': 'acq_magnification',
+    'Calibration Factor': 'acq_calib_factor',
+    'Used': 'acq_used',
+    'Total': 'acq_total',
 }
 
 # Initialize a dictionary to store the extracted values

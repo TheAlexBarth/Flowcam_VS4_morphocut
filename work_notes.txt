@@ -1,0 +1,27 @@
+Todo:
+- confirm on metadata function create
+    - confirm dates are realistic (sample date matches process)
+    - confirm process volume and imaging volume good
+- process, then add to tsv file
+-tsv to process
+    - change object_timestamp to acq_timestamp
+- batch it all
+
+
+2024-06-04:
+- finished file moving functions.
+- moved file parser to functions
+- data are extremely non-uniform
+    - important metadata are in the file names
+    - need to write data to tsv after morphocut
+    - need to handle data in groups based on bad naming convention
+- moved 14-15 into a folder
+    - had to format and fix things like 0708414 to 070814
+- DATA CLEANING NOTES:
+    - I deleted any data which had 'test' or 'edited' in it
+    - this was a lot of early cases in 2010-2014
+    - also some cultures were mixed in
+2024-06-03:
+- started project
+- python for all data processing for easy flow to morphocut
+- started basic functions, etc
