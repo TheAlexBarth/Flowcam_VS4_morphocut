@@ -12,7 +12,7 @@ dir_path = '/Users/planktonperson/Data/Buskey_FC/SWMP_2014-15_badnames' # my fil
 for dir_name in os.listdir(dir_path):
 
     if os.path.isdir(os.path.join(dir_path, dir_name)):
-        if '0708414' in dir_name:
+        if '070814' in dir_name:
             # Make new dir name
             new_dir_name = re.sub('0708414', '070814', dir_name)
             
@@ -28,8 +28,19 @@ for dir_name in os.listdir(dir_path):
             for file_name in os.listdir(os.path.join(dir_path, new_dir_name)):
                 new_file_name = re.sub('0708414', '070814', file_name)
 
-                # os.rename(os.path.join(dir_path, new_dir_name, file_name),os.path.join(dir_path, new_dir_name, new_file_name))
+                os.rename(os.path.join(dir_path, new_dir_name, file_name),os.path.join(dir_path, new_dir_name, new_file_name))
                 
+                # correct lst file
+                                # correct lst file
+                if file_name.endswith('.lst'):
+                    with open(os.path.join(dir_path, new_dir_name, file_name), 'r') as lst_file:
+                        file_contents = lst_file.read()
+                    mod_contents = re.sub('0708414', '070814', file_contents)
+                    with open(os.path.join(dir_path, new_dir_name, file_name), 'w') as lst_file:
+                        lst_file.write(mod_contents)
+
+
                 print('---')
+                print(f'Lst file corrected for {new_dir_name}')
                 print(f"{file_name} changed to {new_file_name}")
                 print('---')

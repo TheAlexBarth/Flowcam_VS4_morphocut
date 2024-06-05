@@ -10,10 +10,10 @@ from datetime import datetime
 large_dir = '/Users/planktonperson/Data/Buskey_FC/SWMP_2014-15_badnames'
 
 dir_names = [d for d in os.listdir(large_dir) if os.path.isdir(os.path.join(large_dir, d))] # add all directories to this list
-dir_names = [d for d in dir_names if d not in ['metadata','raw','ecotaxa']]
+dir_names = [d for d in dir_names if d not in ['metadata','raw','morphocut']]
 
 meta_df = pd.DataFrame(
-    {'dir_name': dir_names}
+    {'object_run_id': dir_names}
 )
 
 
@@ -81,11 +81,10 @@ for rep in repl_data['codes']:
         print(f" There's a {rep}")
 
 meta_df.insert(3, 'acq_run_replicate', repls)
-meta_df = ut.add_dtype_line(meta_df)
 
 # save the output
 
 if not os.path.exists(os.path.join(large_dir, 'metadata')):
     os.mkdir(os.path.join(large_dir, 'metadata'))
 
-meta_df.to_csv(os.path.join(large_dir, 'metadata', '01_meta_dirnames.csv'), sep = '\t', index=False)
+meta_df.to_csv(os.path.join(large_dir, 'metadata', 'meta_dirnames.csv'), index=False)
