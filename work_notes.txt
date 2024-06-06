@@ -1,13 +1,16 @@
 Todo:
-- confirm on metadata function create
-    - confirm dates are realistic (sample date matches process)
-    - confirm process volume and imaging volume good
-- process, then add to tsv file
--tsv to process
-    - change object_timestamp to acq_timestamp
-- batch it all
+- for 2015-17 need to metafix A1
 
+2024-06-06:
+- had to do a bunch still for 15_badnames
+- made runfile script generalizable
+- meta sample extractor is now a utility for cleanliness
+- was able to upload badnames
 
+2024-06-05:
+- had to manually correct list files from 0708414 errors
+- did in restored version w/ metafix
+- messed up because a run file was deleted right now it'll print out error on run_file_reader
 2024-06-04:
 - finished file moving functions.
 - moved file parser to functions
