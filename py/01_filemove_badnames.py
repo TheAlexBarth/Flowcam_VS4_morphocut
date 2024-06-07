@@ -1,7 +1,7 @@
 import os
 import utilities as utils
 
-big_dir = '/Users/planktonperson/Data/Buskey_FC/SWMP_2014-15_badnames'
+big_dir = '/Users/planktonperson/Data/Buskey_FC/SWMP_2015-17'
 
 if not os.path.exists(os.path.join(big_dir, 'raw')):
     os.mkdir(os.path.join(big_dir, 'raw'))

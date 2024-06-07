@@ -1,5 +1,22 @@
 Todo:
-- for 2015-17 need to metafix A1
+- finish run for 15-17 run_file_reader
+- delete metamgmt for the most part
+
+2024-06-07
+- metadata for 15-17
+- chose not to try and fix meta but just regex out what I need
+- mostly worked but somehow CE_052516 was duplicatd so I just chose one
+- realized the metadata management was unnecessary
+- also somehow some raw files for non swmp snuck in manually deleted
+- all sorts of bad run files within the right folder
+    - had to make a hard coded mess in utilites
+        - '_', "AA",'1' all 'A'
+    - there fucking hidden files in folders
+        - ex. CE092915AA is hidden in SC_082715a
+            - since everything is processed at raw folder, I manually deleted at raw level
+            - deleted A for CE092915
+- nearly done but stopped
+
 
 2024-06-06:
 - had to do a bunch still for 15_badnames

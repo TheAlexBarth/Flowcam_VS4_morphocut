@@ -5,7 +5,9 @@ import utilities as ut
 from datetime import datetime
 
 # Define the file paths
-dir_path = '/Users/planktonperson/Data/Buskey_FC/SWMP_2014-15_badnames'
+# also be sure to update utily for metadata on line 61!
+
+dir_path = '/Users/planktonperson/Data/Buskey_FC/SWMP_2015-17'
 output_tsv_path = os.path.join(dir_path, 'morphocut','Ecotaxa','ecotaxa_export.tsv')
 
 
@@ -56,7 +58,7 @@ for file_name in files:
 
 
 
-all_meta = ut.badnames_sampleinfo(meta_runsum)
+all_meta = ut.sampleinfo_15_17(meta_runsum)
 
 
 all_meta.to_csv(os.path.join(dir_path, 'metadata', 'meta.csv'))
