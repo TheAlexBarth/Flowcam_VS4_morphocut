@@ -1,6 +1,18 @@
 Todo:
-- finish run for 15-17 run_file_reader
-- delete metamgmt for the most part
+- write work summary and metadata
+
+2024-06-10:
+- finish process for 15-17, lots of autoimage issues
+- deleted image absent runs SC011416A
+- had to reprocess15-17
+- started 18, manual delete an _autoiamge file and img abs run
+- 2019 had lots of edited files, skipped those with list comp in filemove
+    - also manually deleted some csv; lots of duplicate warnings think it's nested folder mess
+    - because these files were more tampered, there's some whole sampling which are ruined for example CE_080619a was missing .tif files so deleted whole run
+    - had issue and had to redownload
+- 2020 + 21 work:
+    - files were perfect, easy flow through used 18 sampling info
+
 
 2024-06-07
 - metadata for 15-17
@@ -11,7 +23,7 @@ Todo:
 - all sorts of bad run files within the right folder
     - had to make a hard coded mess in utilites
         - '_', "AA",'1' all 'A'
-    - there fucking hidden files in folders
+    - there hidden files in folders
         - ex. CE092915AA is hidden in SC_082715a
             - since everything is processed at raw folder, I manually deleted at raw level
             - deleted A for CE092915

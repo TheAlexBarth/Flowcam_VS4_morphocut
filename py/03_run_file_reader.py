@@ -7,8 +7,12 @@ from datetime import datetime
 # Define the file paths
 # also be sure to update utily for metadata on line 61!
 
-dir_path = '/Users/planktonperson/Data/Buskey_FC/SWMP_2015-17'
+dir_path = '/Users/planktonperson/Data/Buskey_FC/SWMP 2019'
 output_tsv_path = os.path.join(dir_path, 'morphocut','Ecotaxa','ecotaxa_export.tsv')
+
+# create metadata folder for fun
+if not os.path.exists(os.path.join(dir_path, 'metadata')):
+    os.mkdir(os.path.join(dir_path, 'metadata'))
 
 
 #################################
@@ -58,10 +62,13 @@ for file_name in files:
 
 
 
-all_meta = ut.sampleinfo_15_17(meta_runsum)
+all_meta = ut.sampleinfo18(meta_runsum)
 
 
 all_meta.to_csv(os.path.join(dir_path, 'metadata', 'meta.csv'))
+
+ValueError('stop')
+print('test')
 
 ##############################
 '''
